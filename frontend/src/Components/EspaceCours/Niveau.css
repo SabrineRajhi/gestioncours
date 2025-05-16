@@ -1,0 +1,476 @@
+
+/* Conteneur principal */
+.recherche-container {
+
+    max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+
+  background-color: #f4f6f8;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Titre */
+.crud-header h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.crud-header {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+
+
+/* Champ texte */
+.recherche-input {
+  flex: 1 1 50px;
+  padding: 10px;
+  border: 1px solid #7aa321;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+
+.recherche-liste li {
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  background-color: transparent;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.recherche-input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #14aac4;
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 400px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.recherche-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+
+/* Boutons */
+.add-btn,
+.toggle-btn,
+.cancel-btn,
+.edit-btn,
+.delete-btn,
+.save-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+ 
+}
+
+.add-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+
+
+button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.add-btn {
+  background-color: #14aac4;
+  color: white;
+}
+
+.add-btn:hover {
+  background-color: #0f8fa5;
+}
+
+.edit-btn {
+  background-color: #c28c17;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #a8770d;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #bb2d3b;
+}
+
+.cancel-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #5a6268;
+}
+
+.save-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #218838;
+}
+
+.recherche-liste {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: left;
+}
+
+.niveau-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 10px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
+}
+
+.niveau-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #14aac4;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
+.success-message {
+  color: #155724;
+  background-color: #d4edda;
+  padding: 12px;
+  border-radius: 6px;
+  margin: 15px 0;
+}
+
+.error-message {
+  color: #721c24;
+  background-color: #f8d7da;
+  padding: 12px;
+  border-radius: 6px;
+  margin: 15px 0;
+}
+
+.social-section {
+  margin-top: 30px;
+  padding-top: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  padding-right: 20px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+}
+
+.social-icons1:hover {
+  color: #0a66c2 !important;
+}
+
+.social-icons2:hover {
+  color: #2d0dcdd4 !important;
+}
+
+.social-icons3:hover {
+  color: #25d366 !important;
+}
+
+@media (max-width: 768px) {
+  .input-group {
+    flex-direction: column;
+  }
+  
+  button {
+    width: 100%;
+  }
+  
+  .recherche-input {
+    max-width: 100%;
+  }
+  
+  .niveau-item {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .action-buttons {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/*
+/* Conteneur principal */
+.recherche-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #f4f6f8;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Titre */
+.crud-header h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.crud-header {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+/* Champ texte */
+.recherche-input, .edit-input {
+  padding: 10px 12px;
+  border: 1px solid #14aac4;
+  border-radius: 6px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 400px;
+  transition: border-color 0.3s ease;
+}
+
+.recherche-input:focus, .edit-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Liste */
+.recherche-liste {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: left;
+}
+
+.niveau-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 10px;
+  background-color: #223e5a;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: #fff;
+}
+
+.niveau-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+/* Boutons */
+button, .add-btn, .toggle-btn, .cancel-btn, .edit-btn, .delete-btn, .save-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.add-btn {
+  background-color: #14aac4;
+  color: white;
+}
+
+.add-btn:hover {
+  background-color: #0f8fa5;
+}
+
+.edit-btn {
+  background-color: #c28c17;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #a8770d;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #bb2d3b;
+}
+
+.cancel-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #5a6268;
+}
+
+.save-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #218838;
+}
+
+/* Messages */
+.success-message {
+  color: white;
+  background-color: #28a745;
+  padding: 12px;
+  border-radius: 6px;
+  margin: 15px 0;
+}
+
+.error-message {
+  color: white;
+  background-color: #dc3545;
+  padding: 12px;
+  border-radius: 6px;
+  margin: 15px 0;
+}
+
+/* Réseaux sociaux */
+.social-section {
+  margin-top: 30px;
+  padding-top: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  padding-right: 20px;
+}
+
+.social-icons a {
+  color: rgb(45, 30, 30);
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+}
+
+.social-icons1:hover {
+  color: #0a66c2 !important;
+}
+
+.social-icons2:hover {
+  color: #2d0dcd !important;
+}
+
+.social-icons3:hover {
+  color: #25d366 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .input-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .niveau-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .action-buttons {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+
+
+

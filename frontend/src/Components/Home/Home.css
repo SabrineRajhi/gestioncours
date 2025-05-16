@@ -1,0 +1,106 @@
+/* Home Component Styles */
+.home-container {
+  padding: calc(var(--spacing-unit) * 4) 0;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, var(--primary-color), #0056b3);
+  color: var(--white);
+  padding: calc(var(--spacing-unit) * 8) 0;
+  text-align: center;
+  border-radius: var(--border-radius);
+  margin-bottom: calc(var(--spacing-unit) * 4);
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: calc(var(--spacing-unit) * 2);
+  animation: fadeInDown 1s ease-out;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: calc(var(--spacing-unit) * 4);
+  opacity: 0.9;
+  animation: fadeInUp 1s ease-out;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: calc(var(--spacing-unit) * 3);
+  padding: calc(var(--spacing-unit) * 4);
+}
+
+.feature-card {
+  background: var(--white);
+  padding: calc(var(--spacing-unit) * 3);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-speed) ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  margin-bottom: calc(var(--spacing-unit));
+}
+
+.cta-section {
+  text-align: center;
+  padding: calc(var(--spacing-unit) * 6) 0;
+  background-color: var(--gray-100);
+  border-radius: var(--border-radius);
+}
+
+.cta-button {
+  padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 4);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+} 

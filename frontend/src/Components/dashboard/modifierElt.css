@@ -1,0 +1,135 @@
+/* Container for the ModifierElement component */
+.modifier-element-cours {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.modifier-element-cours h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+/* Error message */
+.modifier-element-cours div[style*="color: red"] {
+  background-color: #fee2e2;
+  color: #dc2626;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Form styling */
+.modifier-element-cours form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Label styling */
+.modifier-element-cours label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* Ensure Description label and input are visible */
+.modifier-element-cours label:nth-child(1) {
+  display: flex !important;
+  visibility: visible !important;
+}
+
+/* Input fields */
+.modifier-element-cours input[type="text"],
+.modifier-element-cours input[type="number"],
+.modifier-element-cours input[type="date"],
+.modifier-element-cours select {
+  margin-top: 0.25rem;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  color: #1f2937;
+  background-color: #ffffff;
+  transition: border-color 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure Description input is visible */
+.modifier-element-cours input[type="text"] {
+  display: block !important;
+  visibility: visible !important;
+}
+
+.modifier-element-cours input[type="text"]:focus,
+.modifier-element-cours input[type="number"]:focus,
+.modifier-element-cours input[type="date"]:focus,
+.modifier-element-cours select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* Checkbox */
+.modifier-element-cours input[type="checkbox"] {
+  margin-top: 0.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  accent-color: #3b82f6;
+}
+
+/* File input */
+.modifier-element-cours input[type="file"] {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+/* Button */
+.modifier-element-cours button {
+  padding: 0.75rem 1.5rem;
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.modifier-element-cours button:hover {
+  background-color: #2563eb;
+}
+
+.modifier-element-cours button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+  .modifier-element-cours {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .modifier-element-cours h3 {
+    font-size: 1.25rem;
+  }
+
+  .modifier-element-cours button {
+    padding: 0.75rem;
+  }
+}

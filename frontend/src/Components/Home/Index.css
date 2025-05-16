@@ -1,0 +1,360 @@
+/* Réinitialisation et styles de base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  background: url('/src/Components/Assests/unfocused-restaurant-with-tidy-tables.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Barre de navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 35px;
+  background: #000;
+  width: 130%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-radius: 40px;
+  border: 1px solid rgba(116, 115, 115, 0.5);
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+/* Icônes de navigation alignées à gauche */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-right: auto;
+}
+
+.icon,
+.icon1 {
+  font-size: 1.5rem;
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.icon:hover,
+.icon1:hover {
+  transform: scale(1.2);
+  justify-content: flex-end;
+  color: #ff7f50;
+}
+
+/* Menu de navigation */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: rgb(219, 95, 12);
+}
+
+/* Barre de recherche */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  position: relative;
+}
+
+.search-bar .icon {
+  margin-right: 8px;
+  color: #888;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  width: 150px;
+  padding: 5px;
+  background: transparent;
+}
+
+.search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 0 0 20px 20px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+  color: #fff;
+}
+
+.suggestion-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.suggestion-item:hover {
+  background-color: #ff7f50;
+}
+
+/* Contenu de la page d'accueil */
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.home-content h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #f8f9fa;
+}
+
+/* Footer */
+.footer {
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #060606;
+  gap: 20px;
+}
+
+/* Section contact */
+.footer-left {
+  flex: 1;
+  min-width: 200px;
+  text-align: left;
+}
+
+.footer-left h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #060606;
+}
+
+.footer-left p {
+  margin: 8px 0;
+  color: #060606;
+}
+
+/* Section avantages */
+.footer-center {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+}
+
+.footer-center h5 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #060606;
+}
+
+.advantages-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.advantages-list li {
+  margin: 10px 0;
+}
+
+.advantages-list a {
+  color: #060606;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.advantages-list a:hover {
+  color: #ff7f50;
+}
+
+/* Section réseaux sociaux */
+.social-section {
+  flex: 1;
+  text-align: right;
+  min-width: 200px;
+}
+
+.social-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #060606;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #060606;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+}
+
+.social-icons a:nth-child(1):hover {
+  color: #0a66c2; /* LinkedIn */
+}
+
+.social-icons a:nth-child(2):hover {
+  color: #1877f2; /* Facebook */
+}
+
+.social-icons a:nth-child(3):hover {
+  color: #25d366; /* WhatsApp */
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 20px 20px;
+    margin: 10px auto;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .nav-icons {
+    justify-content: center;
+    margin-top: 10px;
+    margin-right: 0;
+  }
+
+  .icon,
+  .icon1 {
+    font-size: 18px;
+  }
+
+  .search-bar {
+    margin-right: 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .home-content {
+    padding: 15px;
+  }
+
+  .home-content h1 {
+    font-size: 2rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-left,
+  .footer-center,
+  .social-section {
+    text-align: center;
+    width: 100%;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .advantages-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .home-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .footer-left h4,
+  .footer-center h5,
+  .social-section h2 {
+    font-size: 1rem;
+  }
+
+  .social-icons a {
+    font-size: 1.2rem;
+  }
+}

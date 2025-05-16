@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+  body {
+
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+   
+    background-size: cover;
+    background-position: center;
+    
+  }
+
+
+
+.wrapper 
+{
+ position: relative;
+ width: 500px;
+ height: 450px;
+ background: transparent;
+ border-radius: 10px;
+ border: 2px solid rgba(255, 255, 255, .1);
+ color: #190202;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ overflow: hidden;
+ transition: height .2s ease , transform 0.3s ease-in-out;
+/*
+ backdrop-filter: blur(30px);
+ box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+
+*/
+    
+}
+
+
+
+/* Box containing the form */
+.wrapper .from-box {
+    width: 100%;
+    padding: 60px;
+
+
+  }
+
+/* Form title */
+form h1 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1c0303; 
+  }
+
+.wrapper .input-box
+{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  max-width: 330px;
+  height: 50px;
+  margin: 30px 0;
+}
+
+
+.input-box input 
+{
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    border:none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255 .1);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #1c0303; /* Texte en blanc */
+    padding: 10px 45px 10px 15px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+
+.input-box input::placeholder
+{
+    color: #210202;   
+}
+
+.input-box .icon
+{
+    color: rgb(23, 1, 1);
+    margin-right: 10px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: rgb(16, 1, 1);
+}
+
+/* Icône de l'œil */
+.eye-icon {
+position: absolute; /* Correctement écrit */
+    right: 1px; /* Ajuster la position */
+    top: 60%; /* Positionner à la moitié de l'élément parent */
+    transform: translateY(-50%); /* Centrer verticalement l'icône */
+    cursor: pointer; /* Change le curseur lorsque la souris survole l'icône */
+    font-size: 20px; /* Ajuster la taille de l'icône */
+    color: rgb(28, 2, 2); /* Assurer que l'icône soit blanche */
+    visibility: visible; /* Rendre l'icône visible */
+    background: none;
+    border: none;
+    padding: 4px;
+    outline: none;
+  }
+
+/* Error and success message styling */
+.error-text,
+.success-text {
+  font-size: 14px;
+  color: #0d0d0d;
+  margin-top: 10px;
+}
+
+.error-text {
+  color: red;
+  text-align: center;
+  
+}
+
+.success-text {
+  color: green;
+  text-align: center;
+   
+  
+}
+
+form .se-souvenir 
+{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.se-souvenir label input 
+{
+    accent-color: #180202;
+    margin-right: 5px;
+}
+
+.se-souvenir a 
+{
+color: #250303;
+text-decoration: none;
+}
+
+.se-souvenir a:hover
+{
+text-decoration: underline;
+}
+
+form button 
+{
+width: 100%;
+height: 45px;
+background: #1a0101;
+border: none;
+outline: none;
+border-radius: 40px;
+box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+cursor: pointer;
+font-size: 16px;
+color: #090101;
+font-weight: 700;
+}
+
+  form button:disabled {
+    background-color: #131212;
+    cursor: not-allowed;
+  }
+
+form .lien-inscription 
+{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;   
+}
+
+.lien-inscription p a
+{
+ color: #1f0303;
+ text-decoration: none;
+ font-weight: 600;
+}
+
+.lien-inscription p a:hover 
+{
+    text-decoration: underline;
+}
+
+.wrapper.active {
+    transform: translateX(-400px); /* Changer la direction du déplacement */
+  }
+
+.wrapper.active .from-box .connecter
+{
+  transition: none;
+  translate:-400px;
+}
+
+
+@media (max-width: 600px) {
+    .wrapper {
+      width: 90%;
+    }
+  
+    .from-box {
+      padding: 30px;
+    }
+  
+    form h1 {
+      font-size: 28px;
+    }
+  
+    .input-box input {
+      font-size: 14px;
+    }
+  }
